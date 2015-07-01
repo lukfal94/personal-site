@@ -18,7 +18,7 @@
 
 		<!-- Main Content -->
 		<div class="col-md-8 col-md-offset-2" style="margin-top: 100px" id="wrapper">
-			Here's some new stuff that I want to add to the index page.
+			This is the "production site".
 		</div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
