@@ -38,6 +38,7 @@
 									<li class="list-group-item">Bootstrap.js</li>
 									<li class="list-group-item">C</li>
 									<li class="list-group-item">Java</li>
+									<li class="list-group-item">git & GitHub</li>
 								</ul>
 							</div>
 						</div>
