@@ -1,7 +1,4 @@
 # personal-site
 Personal website (www.lukefallon.com)
 
-
-Here's some changes
-
-This should change automatically.
+This website is for my own personal development and promotion.
