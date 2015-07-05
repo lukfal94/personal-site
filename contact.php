@@ -26,6 +26,15 @@
 		if(!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 			$errEmail = '<p class="text-danger">Please enter a valid email</p>';
 		}	
+
+		// If there are no errors, send the email
+		if (!$errName && !$errEmail && !$errMessage) {
+		    if (mail ($to, $subject, $body, $from)) {
+		        $result='<div class="alert alert-success">Thank You! I will be in touch as soon as possible.</div>';
+		    } else {
+		        $result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later.</div>';
+		    }
+		}
 	}
 ?>
 
@@ -77,7 +86,7 @@
 							</div>
 							<div class="form-group">
 								<div class="col-sm-12">
-									<textarea class="form-control" rows="4" name="Message" value="<?php echo htmlspecialchars($_POST['message']); ?>" placeholder="Message"></textarea>
+									<textarea class="form-control" rows="4" name="Message" placeholder="Message"><?php echo htmlspecialchars($_POST['message']); ?></textarea>
 									<?php echo $errMessage; ?>
 								</div>
 							</div>
@@ -89,6 +98,7 @@
 							<div class="form-group">
 								<div class="col-sm-12">
 									<!-- To display confirmation alert -->
+									<?php echo $result; ?>
 								</div>
 							</div>
 						</form>
