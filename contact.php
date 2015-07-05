@@ -6,7 +6,7 @@
 		$name = $_POST['name'];
 		$email = $_POST['email'];
 		$phone = $_POST['phone'];
-		$subj = $_POST['subj'];
+		$subj = $_POST['subj'] ? $_POST['subj'] : "Contact Us : from ".$name;
 		$message = $_POST['message'];
 
 		// Email Variables
@@ -21,10 +21,10 @@
 		}
 
 		if(!$_POST['message']) {
-			$errMessage = "Please enter a message";
+			$errMessage = '<p class="text-danger">Please enter a message</p>';
 		}
 		if(!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-			$errEmail = "Please enter a valid email address";
+			$errEmail = '<p class="text-danger">Please enter a valid email</p>';
 		}	
 	}
 ?>
@@ -55,29 +55,29 @@
 						<form class="form-horizontal" role="form" method="post" action="contact.php">
 							<div class="form-group">
 								<div class="col-sm-12">
-									<input type="text" class="form-control" id="name" name="name" value="<?php echo htmlspecialchars($_POST['name']); ?>"> placeholder="Name">
+									<input type="text" class="form-control" id="name" name="name" value="<?php echo htmlspecialchars($_POST['name']); ?>" placeholder="Name">
 									<?php echo $errName; ?>
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="col-sm-12">
-									<input type="email" class="form-control" id="email" name="email" placeholder="Email">
+									<input type="email" class="form-control" id="email" name="email" value="<?php echo htmlspecialchars($_POST['email']); ?>" placeholder="Email">
 									<?php echo '<p class="text-danger">$errEmail</p>'; ?>
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="col-sm-12">
-									<input type="phone" class="form-control" id="phone" name="phone" placeholder="Phone Number">
+									<input type="phone" class="form-control" id="phone" name="phone" value="<?php echo htmlspecialchars($_POST['phone']); ?>" placeholder="Phone Number">
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="col-sm-12">
-									<input type="text" class="form-control" id="subj" name="subj" placeholder="Subject">
+									<input type="text" class="form-control" id="subj" name="subj" value="<?php echo htmlspecialchars($_POST['subj']); ?>" placeholder="Subject">
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="col-sm-12">
-									<textarea class="form-control" rows="4" name="Message" placeholder="Message"></textarea>
+									<textarea class="form-control" rows="4" name="Message" value="<?php echo htmlspecialchars($_POST['message']); ?>" placeholder="Message"></textarea>
 									<?php echo '<p class="text-danger">$errMessage</p>'; ?>
 								</div>
 							</div>
