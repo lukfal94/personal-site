@@ -20,13 +20,15 @@
 			<div class='container-fluid' style="padding-top: 60px">
 				<div class='row'>
 					<div class='col-md-6'>Contact</div>
-					<form class="form-horizontal" role="form" method="post" action="contact.php">
-						<div class="form-group">
-							<div class="col-sm-10">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Name">
+					<div class="col-md-6">
+						<form class="form-horizontal" role="form" method="post" action="contact.php">
+							<div class="form-group">
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="name" name="name" placeholder="Name">
+								</div>
 							</div>
-						</div>
-					</form>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
