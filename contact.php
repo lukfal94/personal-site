@@ -13,7 +13,7 @@
 		$from = $email;
 		$to = "lukef94@gmail.com";
 		$subject = $subj;
-		$body = "From: $name\n E-Mail: $email\n Phone: $phone\n Re: $subj\n Message: $message";
+		$body = "From: $name\n E-Mail: $email\n Phone: $phone\n Re: $subj\n Message:\n $message";
 
 		// Form Validation
 		if(!$_POST['name']) {
