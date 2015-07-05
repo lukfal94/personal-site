@@ -86,7 +86,7 @@
 							</div>
 							<div class="form-group">
 								<div class="col-sm-12">
-									<textarea class="form-control" rows="4" name="Message" placeholder="Message"><?php echo htmlspecialchars($_POST['message']); ?></textarea>
+									<textarea class="form-control" rows="4" name="message" placeholder="Message"><?php echo htmlspecialchars($_POST['message']); ?></textarea>
 									<?php echo $errMessage; ?>
 								</div>
 							</div>
