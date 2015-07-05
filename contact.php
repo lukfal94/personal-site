@@ -21,19 +21,19 @@
 					<div class='col-md-6'>Contact</div>
 					<div class='col-md-6'>
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Name">
+							<input type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
 						</div>
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Phone Number">
+							<input type="text" class="form-control" placeholder="Phone Number" aria-describedby="basic-addon1">
 						</div>
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Email">
+							<input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
 						</div>
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Subject">
+							<input type="text" class="form-control" placeholder="Subject" aria-describedby="basic-addon1">
 						</div>
 						<div class="input-group">
-							<input type="textarea" class="form-control" placeholder="Message">
+							<input type="textarea" class="form-control" placeholder="Message" aria-describedby="basic-addon1">
 						</div>
 					</div>
 				</div>
