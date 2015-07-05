@@ -15,7 +15,7 @@
 
 	// Form Validation
 	if(!$_POST['name']) {
-		$errName = "Please enter your name";
+		$errName = '<p class="text-danger">Please enter your name</p>';
 	}
 
 	if(!$_POST['message']) {
@@ -54,7 +54,7 @@
 							<div class="form-group">
 								<div class="col-sm-12">
 									<input type="text" class="form-control" id="name" name="name" placeholder="Name">
-									<?php echo '<p class="text-danger">$errName</p>'; ?>
+									<?php echo $errName; ?>
 								</div>
 							</div>
 							<div class="form-group">
