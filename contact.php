@@ -27,6 +27,36 @@
 									<input type="text" class="form-control" id="name" name="name" placeholder="Name">
 								</div>
 							</div>
+							<div class="form-group">
+								<div class="col-sm-10">
+									<input type="email" class="form-control" id="email" name="email" placeholder="Email">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-10">
+									<input type="phone" class="form-control" id="phone" name="phone" placeholder="Phone Number">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="subj" name="subj" placeholder="Subject">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-10">
+									<textarea class="form-control" rows="4" name="Message" placeholder="Message"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-10 col-sm-offset-2">
+									<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-10 col-sm-offset-2">
+									<!-- To display confirmation alert -->
+								</div>
+							</div>
 						</form>
 					</div>
 				</div>
