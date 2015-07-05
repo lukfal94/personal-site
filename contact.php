@@ -1,3 +1,32 @@
+<?php
+
+	// Data variables
+	$name = $_POST['name'];
+	$email = $_POST['email'];
+	$phone = $_POST['phone'];
+	$subj = $_POST['subj'];
+	$message = $_POST['message'];
+
+	// Email Variables
+	$from = $email;
+	$to = "lukef94@gmail.com";
+	$subject = $subj;
+	$body = "From: $name\n E-Mail: $email\n Phone: $phone\n Re: $subj\n Message: $message";
+
+	// Form Validation
+	if(!$_POST['name']) {
+		$errName = "Please enter your name";
+	}
+
+	if(!$_POST['message']) {
+		$errMessage = "Please enter a message";
+	}
+	if(!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+		$errEmail = "Please enter a valid email address";
+	}
+
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -23,37 +52,40 @@
 					<div class="col-md-6">
 						<form class="form-horizontal" role="form" method="post" action="contact.php">
 							<div class="form-group">
-								<div class="col-sm-10">
+								<div class="col-sm-12">
 									<input type="text" class="form-control" id="name" name="name" placeholder="Name">
+									<?php echo '<p class="text-danger">$errName</p>'; ?>
 								</div>
 							</div>
 							<div class="form-group">
-								<div class="col-sm-10">
+								<div class="col-sm-12">
 									<input type="email" class="form-control" id="email" name="email" placeholder="Email">
+									<?php echo '<p class="text-danger">$errEmail</p>'; ?>
 								</div>
 							</div>
 							<div class="form-group">
-								<div class="col-sm-10">
+								<div class="col-sm-12">
 									<input type="phone" class="form-control" id="phone" name="phone" placeholder="Phone Number">
 								</div>
 							</div>
 							<div class="form-group">
-								<div class="col-sm-10">
+								<div class="col-sm-12">
 									<input type="text" class="form-control" id="subj" name="subj" placeholder="Subject">
 								</div>
 							</div>
 							<div class="form-group">
-								<div class="col-sm-10">
+								<div class="col-sm-12">
 									<textarea class="form-control" rows="4" name="Message" placeholder="Message"></textarea>
+									<?php echo '<p class="text-danger">$errMessage</p>'; ?>
 								</div>
 							</div>
 							<div class="form-group">
-								<div class="col-sm-10 col-sm-offset-2">
+								<div class="col-sm-12">
 									<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
 								</div>
 							</div>
 							<div class="form-group">
-								<div class="col-sm-10 col-sm-offset-2">
+								<div class="col-sm-12">
 									<!-- To display confirmation alert -->
 								</div>
 							</div>
