@@ -18,7 +18,7 @@
 		<div class="col-md-8 col-md-offset-2" id="wrapper">
 			<div class='container-fluid' style="padding-top: 60px">
 				<div class='row'>
-					<div class='col-md-6'>Col 1</div>
+					<div class='col-md-6'>Contact</div>
 					<div class='col-md-6'>Col 2</div>
 				</div>
 			</div>
