@@ -62,7 +62,7 @@
 							<div class="form-group">
 								<div class="col-sm-12">
 									<input type="email" class="form-control" id="email" name="email" value="<?php echo htmlspecialchars($_POST['email']); ?>" placeholder="Email">
-									<?php echo '<p class="text-danger">$errEmail</p>'; ?>
+									<?php echo $errEmail; ?>
 								</div>
 							</div>
 							<div class="form-group">
@@ -78,7 +78,7 @@
 							<div class="form-group">
 								<div class="col-sm-12">
 									<textarea class="form-control" rows="4" name="Message" value="<?php echo htmlspecialchars($_POST['message']); ?>" placeholder="Message"></textarea>
-									<?php echo '<p class="text-danger">$errMessage</p>'; ?>
+									<?php echo $errMessage; ?>
 								</div>
 							</div>
 							<div class="form-group">
