@@ -19,7 +19,23 @@
 			<div class='container-fluid' style="padding-top: 60px">
 				<div class='row'>
 					<div class='col-md-6'>Contact</div>
-					<div class='col-md-6'>Col 2</div>
+					<div class='col-md-6'>
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Name">
+						</div>
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Phone Number">
+						</div>
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Email">
+						</div>
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Subject">
+						</div>
+						<div class="input-group">
+							<input type="textarea" class="form-control" placeholder="Message">
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
