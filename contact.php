@@ -20,23 +20,13 @@
 			<div class='container-fluid' style="padding-top: 60px">
 				<div class='row'>
 					<div class='col-md-6'>Contact</div>
-					<div class='col-md-6'>
-						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
+					<form class="form-horizontal" role="form" method="post" action="contact.php">
+						<div class="form-group">
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="name" name="name" placeholder="Name">
+							</div>
 						</div>
-						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Phone Number" aria-describedby="basic-addon1">
-						</div>
-						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
-						</div>
-						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Subject" aria-describedby="basic-addon1">
-						</div>
-						<div class="input-group">
-							<input type="textarea" class="form-control" placeholder="Message" aria-describedby="basic-addon1">
-						</div>
-					</div>
+					</form>
 				</div>
 			</div>
 		</div>
