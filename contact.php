@@ -1,30 +1,32 @@
 <?php
+	
+	// Check if the form has been submitted
+	if(isset($_POST['submit'])) {
+		// Data variables
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		$phone = $_POST['phone'];
+		$subj = $_POST['subj'];
+		$message = $_POST['message'];
 
-	// Data variables
-	$name = $_POST['name'];
-	$email = $_POST['email'];
-	$phone = $_POST['phone'];
-	$subj = $_POST['subj'];
-	$message = $_POST['message'];
+		// Email Variables
+		$from = $email;
+		$to = "lukef94@gmail.com";
+		$subject = $subj;
+		$body = "From: $name\n E-Mail: $email\n Phone: $phone\n Re: $subj\n Message: $message";
 
-	// Email Variables
-	$from = $email;
-	$to = "lukef94@gmail.com";
-	$subject = $subj;
-	$body = "From: $name\n E-Mail: $email\n Phone: $phone\n Re: $subj\n Message: $message";
+		// Form Validation
+		if(!$_POST['name']) {
+			$errName = '<p class="text-danger">Please enter your name</p>';
+		}
 
-	// Form Validation
-	if(!$_POST['name']) {
-		$errName = '<p class="text-danger">Please enter your name</p>';
+		if(!$_POST['message']) {
+			$errMessage = "Please enter a message";
+		}
+		if(!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+			$errEmail = "Please enter a valid email address";
+		}	
 	}
-
-	if(!$_POST['message']) {
-		$errMessage = "Please enter a message";
-	}
-	if(!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-		$errEmail = "Please enter a valid email address";
-	}
-
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +55,7 @@
 						<form class="form-horizontal" role="form" method="post" action="contact.php">
 							<div class="form-group">
 								<div class="col-sm-12">
-									<input type="text" class="form-control" id="name" name="name" placeholder="Name">
+									<input type="text" class="form-control" id="name" name="name" value="<?php echo htmlspecialchars($_POST['name']); ?>"> placeholder="Name">
 									<?php echo $errName; ?>
 								</div>
 							</div>
